@@ -1,0 +1,210 @@
+// products.js - all product content (the "local sample data").
+// In the next phase this file is replaced by an API + database.
+// NOTE: names, prices and delivery details are SAMPLE data for the demo.
+//
+// Each product has:
+//   forms    = the type of product (raw / sprouted ...)
+//   variants = one form at one size, with its own price
+//   pack     = which picture to draw: "pouch" or "bottle"
+
+export const PRODUCTS = [
+  {
+    id: "ragi",
+    name: "Sprouted Ragi Flour",
+    category: "Flours and millets",
+    tagline: "Finger millet, sprouted and stone-milled",
+    color: "#8a5a44",
+    pack: "pouch",
+    summary: "Ragi (finger millet) is a staple grain of Karnataka. We sell it in two forms so you can pick the one that suits the dish.",
+    benefits: [
+      "Naturally rich in calcium and fibre compared with most refined flours",
+      "Sprouting softens the grain, so the flour tastes milder and is easier to digest",
+      "Gluten-free, so it suits people who avoid wheat",
+    ],
+    traditionalUse: "Ragi mudde (steamed balls eaten with curry) and ragi malt are everyday foods in Karnataka. Ragi porridge is a traditional first food for babies.",
+    sourcing: "Ragi is rain-fed and drought tolerant, so it needs far less water than rice. We buy from smallholder farmers around Tumkur and Kolar.",
+    howToUse: [
+      "Porridge: stir 2 tbsp into 1 cup of water, boil for 5 minutes",
+      "Roti and dosa: mix with a little rice flour for a softer texture",
+      "Baby food: ask your paediatrician before starting any new food",
+    ],
+    storage: "Keep in an airtight jar away from sunlight.",
+    shelfLife: "Raw: 3 months. Sprouted: 4 months.",
+    ingredients: "100% finger millet. No preservatives, no additives.",
+    winterNote: "",
+    forms: [
+      { id: "raw", label: "Raw flour", description: "Whole grain milled directly. Coarser texture and a stronger, earthy taste.", bestFor: "Mudde, rotis, dosa" },
+      { id: "sprouted", label: "Sprouted flour", description: "Grain is soaked, sprouted, dried, then milled. Finer and milder.", bestFor: "Porridge, baby food, malt" },
+    ],
+    variants: [
+      { id: "ragi-raw-500", formId: "raw", amount: 500, unit: "g", price: 95 },
+      { id: "ragi-raw-1000", formId: "raw", amount: 1000, unit: "g", price: 175 },
+      { id: "ragi-sprouted-250", formId: "sprouted", amount: 250, unit: "g", price: 120 },
+      { id: "ragi-sprouted-500", formId: "sprouted", amount: 500, unit: "g", price: 220 },
+      { id: "ragi-sprouted-1000", formId: "sprouted", amount: 1000, unit: "g", price: 410 },
+    ],
+  },
+  {
+    id: "coconut-oil",
+    name: "Cold-Pressed Coconut Oil",
+    category: "Oils",
+    tagline: "Pressed at low temperature, nothing added",
+    color: "#c9a227",
+    pack: "bottle",
+    summary: "Made from dried coconut kernels pressed at low temperature, so the natural aroma stays.",
+    benefits: [
+      "Keeps its natural coconut smell and taste (refined oils lose this)",
+      "Works for cooking and for hair and skin massage",
+      "No bleaching, deodorising or chemical solvents",
+    ],
+    traditionalUse: "Used in coastal Karnataka and Kerala kitchens for frying and tempering, for oil massages on babies, and for hair care.",
+    sourcing: "Coconuts come from small farms around Bangalore Rural. Leftover coconut cake is sold as cattle feed, so little is wasted.",
+    howToUse: [
+      "Cooking: good for tempering, stir-fries and South Indian curries",
+      "Hair: warm slightly and massage into the scalp",
+      "Baby massage: patch-test first on a small area",
+    ],
+    storage: "Store at room temperature, away from water. Use a dry spoon.",
+    shelfLife: "9 months from pressing.",
+    ingredients: "100% coconut kernel oil.",
+    winterNote: "In cool Bangalore winters (below about 24 degrees C) pure coconut oil turns solid and cloudy. This is normal. Place the bottle in a bowl of warm water for a few minutes and it will melt again.",
+    forms: [
+      { id: "cold", label: "Cold-pressed", description: "Single type, pressed at low temperature.", bestFor: "Cooking, hair, skin" },
+    ],
+    variants: [
+      { id: "oil-250", formId: "cold", amount: 250, unit: "ml", price: 260 },
+      { id: "oil-500", formId: "cold", amount: 500, unit: "ml", price: 490 },
+      { id: "oil-1000", formId: "cold", amount: 1000, unit: "ml", price: 950 },
+    ],
+  },
+  {
+    id: "blue-pea",
+    name: "Blue Pea Flower",
+    category: "Herbs and teas",
+    tagline: "Aparajita flowers that turn drinks blue",
+    color: "#403d8f",
+    pack: "pouch",
+    summary: "Dried flowers of the butterfly pea plant (aparajita). Available as whole dried flowers or a fine powder.",
+    benefits: [
+      "A natural food colour: no artificial dye needed",
+      "Caffeine-free, so it works as an evening drink",
+      "Contains anthocyanins, the pigment that gives the blue colour",
+    ],
+    traditionalUse: "Used in Ayurveda and in Southeast Asian kitchens. Rice and desserts are coloured with it, and the tea is a common calming drink.",
+    sourcing: "The plant is a climbing legume that grows on fences and field borders, and it fixes nitrogen in the soil.",
+    howToUse: [
+      "Tea: steep 5 flowers (or 1/2 tsp powder) in hot water for 5 minutes",
+      "Colour change: add a few drops of lemon and the tea turns purple",
+      "Cooking: add the powder to rice, idli batter or cakes for colour",
+    ],
+    storage: "Keep dry and away from light. Colour fades in sunlight.",
+    shelfLife: "12 months.",
+    ingredients: "100% butterfly pea flower. Nothing else.",
+    winterNote: "",
+    forms: [
+      { id: "flower", label: "Dried whole flower", description: "Whole flowers. Best for brewing tea that you strain.", bestFor: "Tea" },
+      { id: "powder", label: "Fine powder", description: "Ground flowers. Dissolves completely.", bestFor: "Cooking, baking, lattes" },
+    ],
+    variants: [
+      { id: "bp-flower-25", formId: "flower", amount: 25, unit: "g", price: 120 },
+      { id: "bp-flower-50", formId: "flower", amount: 50, unit: "g", price: 220 },
+      { id: "bp-powder-50", formId: "powder", amount: 50, unit: "g", price: 180 },
+      { id: "bp-powder-100", formId: "powder", amount: 100, unit: "g", price: 340 },
+    ],
+  },
+  {
+    id: "moringa",
+    name: "Moringa Leaf Powder",
+    category: "Greens",
+    tagline: "Drumstick leaves, shade-dried and ground",
+    color: "#4f8a3c",
+    pack: "pouch",
+    summary: "Moringa (drumstick) leaves dried in shade so the green colour is kept.",
+    benefits: [
+      "A source of iron, vitamin C and plant protein for its weight",
+      "Easy way to add greens to food for people who dislike leafy vegetables",
+      "Shade drying keeps more nutrients than sun drying",
+    ],
+    traditionalUse: "Drumstick leaves are cooked as palya (a dry stir-fry) in many South Indian homes.",
+    sourcing: "Moringa trees grow in poor soil with little water and are often planted on farm boundaries.",
+    howToUse: [
+      "Add 1/2 tsp to dal, chapati dough or smoothies",
+      "Start with a small amount: the taste is strong",
+    ],
+    storage: "Airtight container, cool and dark place.",
+    shelfLife: "8 months.",
+    ingredients: "100% moringa leaf.",
+    winterNote: "",
+    forms: [
+      { id: "powder", label: "Leaf powder", description: "Shade-dried and finely ground.", bestFor: "Dal, rotis, smoothies" },
+    ],
+    variants: [
+      { id: "mor-100", formId: "powder", amount: 100, unit: "g", price: 160 },
+      { id: "mor-250", formId: "powder", amount: 250, unit: "g", price: 360 },
+    ],
+  },
+  {
+    id: "turmeric",
+    name: "Stone-Ground Turmeric",
+    category: "Spices",
+    tagline: "Whole roots dried and ground slowly",
+    color: "#e0a526",
+    pack: "pouch",
+    summary: "Turmeric roots boiled, dried and stone-ground at low speed so the oils do not burn.",
+    benefits: [
+      "Deep colour and strong aroma from slow grinding",
+      "Contains curcumin, the pigment studied for its antioxidant properties",
+      "No added colour or starch (common in cheap powders)",
+    ],
+    traditionalUse: "Used in almost every Indian kitchen, in haldi doodh (turmeric milk) and in pre-wedding skin rituals.",
+    sourcing: "Turmeric is grown as an intercrop with coconut and areca in many small farms.",
+    howToUse: [
+      "Cooking: 1/2 tsp is enough for a family-size curry",
+      "Haldi doodh: 1/4 tsp in warm milk with a pinch of pepper",
+      "Face pack: mix with curd, patch-test first",
+    ],
+    storage: "Airtight jar, away from sunlight.",
+    shelfLife: "12 months.",
+    ingredients: "100% turmeric root.",
+    winterNote: "",
+    forms: [
+      { id: "ground", label: "Stone-ground powder", description: "Single type.", bestFor: "Cooking, milk, skin packs" },
+    ],
+    variants: [
+      { id: "tur-100", formId: "ground", amount: 100, unit: "g", price: 90 },
+      { id: "tur-250", formId: "ground", amount: 250, unit: "g", price: 210 },
+      { id: "tur-500", formId: "ground", amount: 500, unit: "g", price: 395 },
+    ],
+  },
+  {
+    id: "jaggery",
+    name: "Jaggery Powder",
+    category: "Sweeteners",
+    tagline: "Sugarcane juice boiled down, nothing else",
+    color: "#a8651e",
+    pack: "pouch",
+    summary: "Unrefined cane sweetener made in small batches without chemical clarifiers.",
+    benefits: [
+      "Less processed than white sugar and keeps some minerals",
+      "Dissolves easily because it is powdered",
+      "Made without sulphur or chemical clarifiers",
+    ],
+    traditionalUse: "Used in payasa, holige and chai across Karnataka, and eaten after meals in many homes.",
+    sourcing: "Made in village units close to the cane fields, so little transport is needed.",
+    howToUse: [
+      "Replace sugar 1:1 in tea, porridge or sweets",
+      "Add after the milk is warm (not boiling) to avoid curdling",
+    ],
+    storage: "Keep in a sealed jar. Jaggery absorbs moisture and clumps.",
+    shelfLife: "6 months.",
+    ingredients: "100% sugarcane juice.",
+    winterNote: "",
+    forms: [
+      { id: "powder", label: "Powder", description: "Fine, free-flowing.", bestFor: "Tea, sweets, porridge" },
+    ],
+    variants: [
+      { id: "jag-500", formId: "powder", amount: 500, unit: "g", price: 110 },
+      { id: "jag-1000", formId: "powder", amount: 1000, unit: "g", price: 200 },
+    ],
+  },
+];
